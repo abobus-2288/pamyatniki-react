@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+import {NavLink} from 'react-router-dom';
+
 import Logo from './img/Logo.png';
 import coolicon from './img/coolicon.png';
 import Menu from './img/Menu.png';
@@ -22,25 +24,25 @@ import Russia from './img/countries/Russia.png';
 import Spain from './img/countries/Spain.png';
 import Turkey from './img/countries/Turkey.png';
 
-import './Header.css';
+import classes from "./Header.module.css";
 
 
 const Header = () => {
 
     const onClickMenu = () => {
-        const button = document.querySelector('.menu');
-        const menu = document.querySelector('.main');
+        const button = document.querySelector(`.${classes.menu}`);
+        const menu = document.querySelector(`.${classes.main}`);
 
         let buttonState;
         let menuState;
 
-        if (button.classList.contains('menu_opened'))
+        if (button.classList.contains(classes.menu_opened))
         {
             buttonState = 'opened';
             menuState = 'opened';
         }
 
-        if (button.classList.contains('menu_closed'))
+        if (button.classList.contains(classes.menu_closed))
         {
             buttonState = 'closed';
             menuState = 'closed';
@@ -49,15 +51,15 @@ const Header = () => {
         switch (buttonState) {
             case 'closed': {
                 // console.log('Closed');
-                button.classList.replace('menu_closed', 'menu_opened');
-                menu.classList.replace('main_closed', 'main_opened');
+                button.classList.replace(classes.menu_closed,  classes.menu_opened);
+                menu.classList.replace(classes.main_closed, classes.main_opened);
                 break;
             }
 
             case 'opened': {
                 // console.log('Opened');
-                button.classList.replace('menu_opened', 'menu_closed');
-                menu.classList.replace('main_opened', 'main_closed');
+                button.classList.replace(classes.menu_opened, classes.menu_closed);
+                menu.classList.replace(classes.main_opened, classes.main_closed);
                 break;
             }
         }
@@ -65,110 +67,110 @@ const Header = () => {
 
     return (
         <header>
-            <div className="header">
-                <button onClick={onClickMenu} className="menu menu_closed"></button>
-                <a href="#" className="logo">
-                    <img className="logo__img" src={Logo} alt="Logo"/>
+            <div className={classes.header}>
+                <button onClick={onClickMenu} className={`${classes.menu} ${classes.menu_closed}`}></button>
+                <a href="#" className={classes.logo}>
+                    <img className={classes.logo} src={Logo} alt="Logo"/>
                 </a>
-                <a className="donate-button header-icon" href="#">
-                    <div className="donate-button__text">
+                <a className={`${classes.donateButton} ${classes.headerIcon}`} href="#">
+                    <div className={classes.donateButtonText}>
                         Пожертвовать
                     </div>
                 </a>
-                <a href="#" className="account header-icon">
+                <a href="#" className={classes.headerIcon}>
                     <img className="account__img" src={coolicon} alt="account"/>
                 </a>
-                <a href="#" className="search header-icon">
+                <a href="#" className={classes.headerIcon}>
                     <img className="search__img" src={Search} alt="Search"/>
                 </a>
             </div>
 
-            <div className="main main_closed">
-                <div className="categories">
+            <div className={`${classes.main} ${classes.main_closed}`}>
+                <div className={classes.categories}>
                     <h3>Разделы</h3>
                     <ul>
-                        <li><a href="#">Страны мира </a></li>
+                        <li><NavLink to={'/'}>Страны мира </NavLink></li>
                         <li><a href="#">Города мира</a></li>
                         <li><a href="#">Достопримечательности </a></li>
                         <li><a href="#">Борьба с вандализмом </a></li>
-                        <li><a href="#">О нас </a></li>
+                        <li><NavLink to={'/about'}>О нас </NavLink></li>
                     </ul>
                 </div>
-                <div className="countries">
+                <div className={classes.countries}>
                     <ul>
-                        <li><a className="countries__tab actvie">Страны</a></li>
-                        <li><a className="countries__tab">Города</a></li>
-                        <li><a className="countries__tab">Достопримечательности</a></li>
+                        <li><a className={classes.actvie}>Страны</a></li>
+                        <li><a>Города</a></li>
+                        <li><a>Достопримечательности</a></li>
                     </ul>
-                    <div className="countries__rows">
-                        <div className="countries__row">
-                            <div className="countries__country">
+                    <div className={classes.countries__rows}>
+                        <div className={classes.countries__row}>
+                            <div className={classes.countries__country}>
                                 <img src={Australia} alt=""/>
                                 <a href="#">Австралия</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Bulgaria} alt=""/>
                                 <a href="#">Болгария</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Greece} alt=""/>
                                 <a href="#">Греция</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Cube} alt=""/>
                                 <a href="#">Куба</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Poland} alt=""/>
                                 <a href="#">Польша</a>
                             </div>
                         </div>
-                        <div className="countries__row">
-                            <div className="countries__country">
+                        <div className={classes.countries__row}>
+                            <div className={classes.countries__country}>
                                 <img src={Austria} alt=""/>
                                 <a href="#">Австрия</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Brazil} alt=""/>
                                 <a href="#">Бразилия</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Denmark} alt=""/>
                                 <a href="#">Дания</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Spain} alt=""/>
                                 <a href="#">Испания</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Portugal} alt=""/>
                                 <a href="#">Португалия</a>
                             </div>
                         </div>
-                        <div className="countries__row">
-                            <div className="countries__country">
+                        <div className={classes.countries__row}>
+                            <div className={classes.countries__country}>
                                 <img src={Russia} alt=""/>
                                 <a href="#">Россия</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Turkey} alt=""/>
                                 <a href="#">Турция</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Chech} alt=""/>
                                 <a href="#">Чехия</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Hungary} alt=""/>
                                 <a href="#">Венгрия</a>
                             </div>
-                            <div className="countries__country">
+                            <div className={classes.countries__country}>
                                 <img src={Egypt} alt=""/>
                                 <a href="#">Египет</a>
                             </div>
                         </div>
                     </div>
-                    <div className="countries__all">
+                    <div className={classes.countries__all}>
                         <a href="#">Все страны мира ></a>
                     </div>
                 </div>
