@@ -75,7 +75,7 @@ const Header = () => {
                 </a>
                 <a className={`${classes.donateButton} ${classes.headerIcon}`} href="#">
                     <div className={classes.donateButtonText}>
-                        Пожертвовать2
+                        Пожертвовать
                     </div>
                 </a>
                 <a href="#" className={classes.headerIcon}>
@@ -90,11 +90,11 @@ const Header = () => {
                 <div className={classes.categories}>
                     <h3>Разделы</h3>
                     <ul>
-                        <li><NavLink to={'/'}>Страны мира </NavLink></li>
+                        <li><NavLink onClick={onClickMenu} to={'/'}>Страны мира </NavLink></li>
                         <li><a href="#">Города мира</a></li>
                         <li><a href="#">Достопримечательности </a></li>
                         <li><a href="#">Борьба с вандализмом </a></li>
-                        <li><NavLink to={'/about'}>О нас </NavLink></li>
+                        <li><NavLink onClick={onClickMenu} to={'/about'}>О нас </NavLink></li>
                     </ul>
                 </div>
                 <div className={classes.countries}>

@@ -80,6 +80,7 @@ body {
 
 .main_closed {
     display: none;
+    border: none;
 }
 
 .main_opened {
@@ -188,5 +189,9 @@ body {
 
     .countries__rows {
         flex-direction: column;
+    }
+
+    .logo {
+        width: 30%;
     }
 }
