@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <footer>
             <div className={classes.container}>
-                <p>+3750000000001</p>
+                <p>+375000000002</p>
                 <img src={logo} alt="logo"/>
                 <p>monument@mail.com</p>
             </div>
