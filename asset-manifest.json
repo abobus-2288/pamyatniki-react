@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/pamyatniki-react/static/css/main.f738077e.css",
-    "main.js": "/pamyatniki-react/static/js/main.af281c0c.js",
+    "main.js": "/pamyatniki-react/static/js/main.a41d7808.js",
     "static/js/787.b393f1af.chunk.js": "/pamyatniki-react/static/js/787.b393f1af.chunk.js",
     "static/media/Rectangle 70.jpg": "/pamyatniki-react/static/media/Rectangle 70.f8474e20f96c51704fc2.jpg",
     "index.html": "/pamyatniki-react/index.html",
     "main.f738077e.css.map": "/pamyatniki-react/static/css/main.f738077e.css.map",
-    "main.af281c0c.js.map": "/pamyatniki-react/static/js/main.af281c0c.js.map",
+    "main.a41d7808.js.map": "/pamyatniki-react/static/js/main.a41d7808.js.map",
     "787.b393f1af.chunk.js.map": "/pamyatniki-react/static/js/787.b393f1af.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f738077e.css",
-    "static/js/main.af281c0c.js"
+    "static/js/main.a41d7808.js"
   ]
 }
