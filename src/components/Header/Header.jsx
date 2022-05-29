@@ -28,8 +28,8 @@ import classes from "./Header.module.css";
 const Header = () => {
 
     const onClickMenu = () => {
-        const button = document.querySelector(`.${classes.menu}`);
-        const menu = document.querySelector(`.${classes.main}`);
+        const button = document.getElementById('button');
+        const menu = document.getElementById('main');
 
         // console.log(button);
         // console.log(menu);
@@ -69,7 +69,7 @@ const Header = () => {
     return (
         <header>
             <div className={classes.header}>
-                <button onClick={onClickMenu} className={`${classes.menu} ${classes.menu_closed}`}></button>
+                <button onClick={onClickMenu} className={`${classes.menu} ${classes.menu_closed}`} id="button"></button>
                 <a href="#" className={classes.logo}>
                     <img className={classes.logo} src={Logo} alt="Logo"/>
                 </a>
@@ -86,7 +86,7 @@ const Header = () => {
                 </a>
             </div>
 
-            <div className={`${classes.main} ${classes.main_closed}`}>
+            <div className={`${classes.main} ${classes.main_closed}`} id="main">
                 <div className={classes.categories}>
                     <h3>Разделы</h3>
                     <ul>
