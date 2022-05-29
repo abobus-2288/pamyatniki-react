@@ -31,6 +31,9 @@ const Header = () => {
         const button = document.querySelector(`.${classes.menu}`);
         const menu = document.querySelector(`.${classes.main}`);
 
+        console.log(button);
+        console.log(menu)
+
         let buttonState;
         let menuState;
 
