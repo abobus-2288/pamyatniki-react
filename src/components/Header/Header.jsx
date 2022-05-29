@@ -75,7 +75,7 @@ const Header = () => {
                 </a>
                 <a className={`${classes.donateButton} ${classes.headerIcon}`} href="#">
                     <div className={classes.donateButtonText}>
-                        Пожертвовать
+                        Пожертвовать2
                     </div>
                 </a>
                 <a href="#" className={classes.headerIcon}>
