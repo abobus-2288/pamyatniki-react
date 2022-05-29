@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    width: 100%;
+}
+
+.header {
+    background-color: black;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /*position: absolute;*/
+}
+
+.menu {
+    background-color: black;
+    border: none;
+    margin-left: 15px;
+    width: 34px;
+    height: 27px;
+}
+
+.menu_closed {
+    background-image: url("img/Menu.png");
+}
+
+.menu_opened {
+    background-image: url("img/menu-close.png");
+    /*width: 27px;*/
+    background-repeat: no-repeat;
+}
+
+.logo {
+    /*margin: auto;*/
+    flex-grow: 2;
+    text-align: center;
+}
+
+.donate-button {
+    text-decoration: none;
+    width: 165px;
+    height: 40px;
+    background-color: rgba(226, 188, 50, 1);
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.donate-button__text {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.header-icon {
+    margin: 20px;
+}
+
+
+/* Нижняя часть */
+
+.main {
+    background-color: rgb(21, 21, 21);
+    border: #505050 1.5px solid;
+    border-left: none;
+    position: absolute;
+    height: 404px;
+}
+
+.main_closed {
+    display: none;
+}
+
+.main_opened {
+    width: 100%;
+    display: flex;
+}
+
+.categories {
+    margin-left: 20px;
+    padding-right: 50px;
+    border-left: #505050 1.5px ;
+}
+
+.categories h3 {
+    color: #8A8A8A;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 57px;
+    margin-top: 30px;
+}
+
+.categories a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.categories li {
+    list-style-type: none;
+    margin: 10px 0 10px 0;
+}
+
+.countries {
+    width: 100%;
+    border-left: #505050 1px solid;
+}
+
+.countries li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 30px;
+    font-weight: 500;
+    font-size: 30px;
+    color: rgb(138, 138, 138);
+}
+
+.countries a.actvie {
+    color: white;
+    text-decoration: underline white;
+}
+
+.countries__rows {
+    display: flex;
+}
+
+.countries__row {
+    width: 33%;
+    margin-left: 30px;
+}
+
+.countries__country {
+    margin: 15px;
+}
+
+.countries__country a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+}
+
+.countries__all {
+    margin: 0 35px;
+}
+
+.countries__all a {
+    color: #28783E;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+/* Адаптив */
+
+@media(max-width: 1310px) {
+
+    header {
+        width: 100%;
+    }
+
+    .countries ul li {
+        display: block;
+    }
+
+    .main {
+        height: max-content;
+    }
+
+    .countries__all {
+        padding-bottom: 35px;
+    }
+
+    .countries__row {
+        width: 100%;
+    }
+
+    .countries__rows {
+        flex-direction: column;
+    }
+}
