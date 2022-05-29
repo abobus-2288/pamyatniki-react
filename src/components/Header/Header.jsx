@@ -31,8 +31,8 @@ const Header = () => {
         const button = document.querySelector(`.${classes.menu}`);
         const menu = document.querySelector(`.${classes.main}`);
 
-        console.log(button);
-        console.log(menu)
+        // console.log(button);
+        // console.log(menu);
 
         let buttonState;
         let menuState;
@@ -51,14 +51,14 @@ const Header = () => {
 
         switch (buttonState) {
             case 'closed': {
-                // console.log('Closed');
+                console.log('Closed');
                 button.classList.replace(classes.menu_closed,  classes.menu_opened);
                 menu.classList.replace(classes.main_closed, classes.main_opened);
                 break;
             }
 
             case 'opened': {
-                // console.log('Opened');
+                console.log('Opened');
                 button.classList.replace(classes.menu_opened, classes.menu_closed);
                 menu.classList.replace(classes.main_opened, classes.main_closed);
                 break;
