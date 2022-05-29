@@ -1,11 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 
 import {NavLink} from 'react-router-dom';
 
 import Logo from './img/Logo.png';
 import coolicon from './img/coolicon.png';
-import Menu from './img/Menu.png';
-import Menu_close from './img/menu-close.png';
 import Search from './img/Search.png';
 
 import Australia from './img/countries/Australia.png';

@@ -19,7 +19,7 @@ const About = () => {
                         </p>
                     </div>
                     <div className={classes.photo}>
-                        <img src={photo} alt="photo"/>
+                        <img src={photo} alt=""/>
                     </div>
                     <div className={classes.text}>
                         <p>Здесь вы можете помочь памятникам или городам, которые пострадали от ВАНДАЛИЗМА в их
