@@ -191,9 +191,6 @@ body {
 .tab {
     margin: 10px;
     color: white;
-}
-
-.tab li {
     list-style-type: none;
 }
 
