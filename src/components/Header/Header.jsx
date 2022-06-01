@@ -83,25 +83,46 @@ const HeaderMobile = () => {
                     selectedTabClassName={classes.tab__selected}
                 >
                     <TabList>
-                        <Tab className={classes.tab}>
+                        <div className={classes.tabsCategories}>
+                            <Tab className={classes.tab}>
                                 Разделы
-                        </Tab>
-                        <Tab className={classes.tab}>
+                            </Tab>
+                            <Tab className={classes.tab}>
+                                Категории
+                            </Tab>
+                            <Tab className={classes.tab}>
                                 Аккаунт
-                        </Tab>
-                        <Tab className={classes.tab}>
+                            </Tab>
+                            <Tab className={classes.tab}>
                                 Пожертвовать
-                        </Tab>
+                            </Tab>
+                            <Tab className={classes.tab}>
+                                Поиск
+                            </Tab>
+                        </div>
                     </TabList>
 
+                    <TabPanel className={classes.reactTabsTabPanel + ' ' + classes.categoriesMobile}>
+                        <h3>Разделы</h3>
+                        <ul>
+                            <li><NavLink onClick={onClickMenuMobile} to={'/'}>Страны мира </NavLink></li>
+                            <li><a href="#">Города мира</a></li>
+                            <li><a href="#">Достопримечательности </a></li>
+                            <li><a href="#">Борьба с вандализмом </a></li>
+                            <li><NavLink onClick={onClickMenuMobile} to={'/about'}>О нас </NavLink></li>
+                        </ul>
+                    </TabPanel>
                     <TabPanel className={classes.reactTabsTabPanel}>
-                        Разделы
+
                     </TabPanel>
                     <TabPanel className={classes.reactTabsTabPanel}>
                         Аккаунт
                     </TabPanel>
                     <TabPanel className={classes.reactTabsTabPanel}>
                         Пожертвовать
+                    </TabPanel>
+                    <TabPanel className={classes.reactTabsTabPanel}>
+                        Поиск
                     </TabPanel>
                 </Tabs>
             </div>
