@@ -12,7 +12,7 @@ body {
     width: 100%;
 }
 
-.header {
+.header_desktop {
     background-color: black;
     height: 70px;
     display: flex;
@@ -20,6 +20,15 @@ body {
     align-items: center;
     width: 100%;
     /*position: absolute;*/
+}
+
+.header_mobile {
+    background-color: black;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .menu {
@@ -42,7 +51,7 @@ body {
 
 .logo {
     /*margin: auto;*/
-    flex-grow: 2;
+    flex-grow: 3;
     text-align: center;
 }
 
@@ -70,12 +79,21 @@ body {
 
 /* Нижняя часть */
 
-.main {
+.main_desktop {
     background-color: rgb(21, 21, 21);
     border: #505050 1.5px solid;
     border-left: none;
     position: absolute;
     height: 404px;
+}
+
+.main_mobile {
+    background-color: rgb(21, 21, 21);
+    border: #505050 1.5px solid;
+    border-left: none;
+    position: absolute;
+    width: 100%;
+    height: 200px;
 }
 
 .main_closed {
@@ -91,7 +109,7 @@ body {
 .categories {
     margin-left: 20px;
     padding-right: 50px;
-    border-left: #505050 1.5px ;
+    border-left: #505050 1.5px;
 }
 
 .categories h3 {
@@ -163,20 +181,62 @@ body {
     font-size: 26px;
 }
 
+/* Табы */
+
+.reactTabs {
+    display: flex;
+    height: 100%;
+}
+
+.tab {
+    margin: 10px;
+    color: white;
+}
+
+.tab li {
+    list-style-type: none;
+}
+
+.tab__selected {
+    text-decoration: underline rgb(255, 255, 255);
+}
+
+.reactTabsTabPanel {
+    display: none;
+}
+
+.reactTabsTabPanelSelected {
+    width: 100%;
+    display: block;
+}
 /* Адаптив */
 
-@media(max-width: 1310px) {
+@media (min-width: 1311px) {
+    .header_mobile {
+        display: none;
+    }
+
+    .main_mobile {
+        display: none
+    }
+}
+
+@media (max-width: 1310px) {
 
     header {
         width: 100%;
+    }
+
+    .header_desktop {
+        display: none;
     }
 
     .countries ul li {
         display: block;
     }
 
-    .main {
-        height: max-content;
+    .main_desktop {
+        display: none;
     }
 
     .countries__all {
@@ -195,3 +255,4 @@ body {
         width: 30%;
     }
 }
+

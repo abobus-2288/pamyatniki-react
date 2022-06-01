@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 
 import {NavLink} from 'react-router-dom';
+
+import {Tabs, Tab, TabList, TabPanel} from "react-tabs";
 
 import Logo from './img/Logo.png';
 import coolicon from './img/coolicon.png';
@@ -24,41 +26,39 @@ import Turkey from './img/countries/Turkey.png';
 
 import classes from "./Header.module.css";
 
+const HeaderMobile = () => {
 
-const Header = () => {
+    const [tabIndex, setTabIndex] = useState(1);
 
-    const onClickMenu = () => {
-        const button = document.getElementById('button');
-        const menu = document.getElementById('main');
+    const onClickMenuMobile = () => {
 
-        // console.log(button);
-        // console.log(menu);
 
-        let buttonState;
-        let menuState;
+        const button = document.getElementById('button_mobile');
+        const menu = document.getElementById('main_mobile');
 
-        if (button.classList.contains(classes.menu_opened))
-        {
-            buttonState = 'opened';
-            menuState = 'opened';
+        let buttonMobileState;
+        let menuMobileState;
+
+        if (button.classList.contains(classes.menu_opened)) {
+            buttonMobileState = 'opened';
+            menuMobileState = 'opened';
         }
 
-        if (button.classList.contains(classes.menu_closed))
-        {
-            buttonState = 'closed';
-            menuState = 'closed';
+        if (button.classList.contains(classes.menu_closed)) {
+            buttonMobileState = 'closed';
+            menuMobileState = 'closed';
         }
 
-        switch (buttonState) {
+        switch (buttonMobileState) {
             case 'closed': {
-                console.log('Closed');
-                button.classList.replace(classes.menu_closed,  classes.menu_opened);
+                // console.log('Closed');
+                button.classList.replace(classes.menu_closed, classes.menu_opened);
                 menu.classList.replace(classes.main_closed, classes.main_opened);
                 break;
             }
 
             case 'opened': {
-                console.log('Opened');
+                // console.log('Opened');
                 button.classList.replace(classes.menu_opened, classes.menu_closed);
                 menu.classList.replace(classes.main_opened, classes.main_closed);
                 break;
@@ -67,9 +67,96 @@ const Header = () => {
     }
 
     return (
+        <>
+            <div className={classes.header_mobile}>
+                <button onClick={onClickMenuMobile} className={`${classes.menu} ${classes.menu_opened}`}
+                        id="button_mobile"></button>
+                <a href="#" className={classes.logo}>
+                    <img className={classes.logo} src={Logo} alt="Logo"/>
+                </a>
+            </div>
+            <div className={classes.main_mobile + ' ' + classes.main_opened} id="main_mobile">
+                <Tabs
+                    className={classes.reactTabs}
+                    forceRenderTabPanel
+                    selectedTabPanelClassName={classes.reactTabsTabPanelSelected}
+                    selectedTabClassName={classes.tab__selected}
+                >
+                    <TabList>
+                        <Tab className={classes.tab}>
+                                Разделы
+                        </Tab>
+                        <Tab className={classes.tab}>
+                                Аккаунт
+                        </Tab>
+                        <Tab className={classes.tab}>
+                                Пожертвовать
+                        </Tab>
+                    </TabList>
+
+                    <TabPanel className={classes.reactTabsTabPanel}>
+                        Разделы
+                    </TabPanel>
+                    <TabPanel className={classes.reactTabsTabPanel}>
+                        Аккаунт
+                    </TabPanel>
+                    <TabPanel className={classes.reactTabsTabPanel}>
+                        Пожертвовать
+                    </TabPanel>
+                </Tabs>
+            </div>
+        </>
+    )
+}
+
+
+const Header = () => {
+
+    const onClickMenu = () => {
+        const button = document.getElementById('button_desktop');
+        const menu = document.getElementById('main_desktop');
+
+        // console.log(button);
+        // console.log(menu);
+
+        let buttonState;
+        let menuState;
+
+        if (button.classList.contains(classes.menu_opened)) {
+            buttonState = 'opened';
+            menuState = 'opened';
+        }
+
+        if (button.classList.contains(classes.menu_closed)) {
+            buttonState = 'closed';
+            menuState = 'closed';
+        }
+
+        switch (buttonState) {
+            case 'closed': {
+                // console.log('Closed');
+                button.classList.replace(classes.menu_closed, classes.menu_opened);
+                menu.classList.replace(classes.main_closed, classes.main_opened);
+                break;
+            }
+
+            case 'opened': {
+                // console.log('Opened');
+                button.classList.replace(classes.menu_opened, classes.menu_closed);
+                menu.classList.replace(classes.main_opened, classes.main_closed);
+                break;
+            }
+        }
+    }
+
+
+    return (
         <header>
-            <div className={classes.header}>
-                <button onClick={onClickMenu} className={`${classes.menu} ${classes.menu_closed}`} id="button"></button>
+            <HeaderMobile/>
+
+            <div className={classes.header_desktop} id="header">
+                <button onClick={onClickMenu} className={`${classes.menu} ${classes.menu_closed}`}
+                        id="button_desktop"></button>
                 <a href="#" className={classes.logo}>
                     <img className={classes.logo} src={Logo} alt="Logo"/>
                 </a>
@@ -85,8 +172,7 @@ const Header = () => {
                     <img className="search__img" src={Search} alt="Search"/>
                 </a>
             </div>
-
-            <div className={`${classes.main} ${classes.main_closed}`} id="main">
+            <div className={`${classes.main_desktop} ${classes.main_closed} `} id="main_desktop">
                 <div className={classes.categories}>
                     <h3>Разделы</h3>
                     <ul>
@@ -177,7 +263,7 @@ const Header = () => {
                 </div>
             </div>
         </header>
-)
+    )
 }
 
 export default Header;
