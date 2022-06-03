@@ -69,13 +69,13 @@ const HeaderMobile = () => {
     return (
         <>
             <div className={classes.header_mobile}>
-                <button onClick={onClickMenuMobile} className={`${classes.menu} ${classes.menu_opened}`}
+                <button onClick={onClickMenuMobile} className={`${classes.menu} ${classes.menu_closed}`}
                         id="button_mobile"></button>
                 <a href="#" className={classes.logo}>
                     <img className={classes.logo} src={Logo} alt="Logo"/>
                 </a>
             </div>
-            <div className={classes.main_mobile + ' ' + classes.main_opened} id="main_mobile">
+            <div className={classes.main_mobile + ' ' + classes.main_closed} id="main_mobile">
                 <Tabs
                     className={classes.reactTabs}
                     forceRenderTabPanel
