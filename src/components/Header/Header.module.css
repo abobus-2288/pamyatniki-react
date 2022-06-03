@@ -103,6 +103,7 @@ body {
 
 .main_opened {
     width: 100%;
+    height: max-content;
     display: flex;
 }
 
@@ -181,7 +182,9 @@ body {
     font-size: 26px;
 }
 
-/* Табы */
+/*
+ Табы
+*/
 
 .reactTabs {
     display: flex;
@@ -189,9 +192,10 @@ body {
 }
 
 .tab {
-    margin: 10px;
+    margin: 4px 4px 4px 10px;
     color: white;
     list-style-type: none;
+    font-size: 15px;
 }
 
 .tab__selected {
@@ -199,6 +203,7 @@ body {
 }
 
 .reactTabsTabPanel {
+    padding-left: 5px;
     display: none;
 }
 
@@ -206,7 +211,82 @@ body {
     width: 100%;
     display: block;
 }
+
+.tabsCategories {
+    padding-top: 15px;
+    height: 100%;
+    border: 1px solid #505050;
+    border-top: none;
+}
+
+.categoriesMobile li {
+    list-style-type: none;
+    margin: 5px;
+    color: rgb(138, 138, 138);
+}
+
+.categoriesMobile a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.reactTabs h3 {
+    color: #8A8A8A;
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.tabGroupSeparator {
+    width: 100%;
+    height: 1px;
+    background: rgb(21,21,21);
+    background: linear-gradient(90deg, rgba(21,21,21,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(21,21,21,1) 100%);
+}
+
+.tab:last-of-type {
+    padding-bottom: 10px;
+}
+
+.tabCountries {
+    display: flex;
+}
+
+.tabCountries__row {
+    margin: 7px;
+}
+
+.tabCountries__country {
+
+}
+
+.tabCountries__country:last-of-type {
+    padding-bottom: 10px;
+}
+
+.tabCountries__country img {
+    width: 15px;
+}
+
+.tabCountries__country a {
+    color: white;
+    text-decoration: none;
+}
+
 /* Адаптив */
+
+@media (max-width: 768px) {
+    .tabCountries {
+        flex-direction: column;
+    }
+
+    .tabCountries__row {
+        margin: 0 7px 0 7px;
+    }
+}
 
 @media (min-width: 1311px) {
     .header_mobile {

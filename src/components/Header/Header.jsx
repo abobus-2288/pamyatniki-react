@@ -88,9 +88,6 @@ const HeaderMobile = () => {
                                 Разделы
                             </Tab>
                             <Tab className={classes.tab}>
-                                Категории
-                            </Tab>
-                            <Tab className={classes.tab}>
                                 Аккаунт
                             </Tab>
                             <Tab className={classes.tab}>
@@ -98,6 +95,16 @@ const HeaderMobile = () => {
                             </Tab>
                             <Tab className={classes.tab}>
                                 Поиск
+                            </Tab>
+                            <div className={classes.tabGroupSeparator}></div>
+                            <Tab className={classes.tab}>
+                                Страны
+                            </Tab>
+                            <Tab className={classes.tab}>
+                                Города
+                            </Tab>
+                            <Tab className={classes.tab}>
+                                Достопримечательности
                             </Tab>
                         </div>
                     </TabList>
@@ -113,16 +120,102 @@ const HeaderMobile = () => {
                         </ul>
                     </TabPanel>
                     <TabPanel className={classes.reactTabsTabPanel}>
-
+                        <h3>
+                            Аккаунт
+                        </h3>
                     </TabPanel>
                     <TabPanel className={classes.reactTabsTabPanel}>
-                        Аккаунт
+                        <h3>
+                            Пожертвовать
+                        </h3>
                     </TabPanel>
                     <TabPanel className={classes.reactTabsTabPanel}>
-                        Пожертвовать
+                        <h3>
+                            Поиск
+                        </h3>
                     </TabPanel>
                     <TabPanel className={classes.reactTabsTabPanel}>
-                        Поиск
+                        <h3>
+                            Страны
+                        </h3>
+                        <div className={classes.tabCountries}>
+                            <div className={classes.tabCountries__row}>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Australia} alt=""/>
+                                    <a href="#">Австралия</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Bulgaria} alt=""/>
+                                    <a href="#">Болгария</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Greece} alt=""/>
+                                    <a href="#">Греция</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Cube} alt=""/>
+                                    <a href="#">Куба</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Poland} alt=""/>
+                                    <a href="#">Польша</a>
+                                </div>
+                            </div>
+                            <div className={classes.tabCountries__row}>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Austria} alt=""/>
+                                    <a href="#">Австрия</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Brazil} alt=""/>
+                                    <a href="#">Бразилия</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Denmark} alt=""/>
+                                    <a href="#">Дания</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Spain} alt=""/>
+                                    <a href="#">Испания</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Portugal} alt=""/>
+                                    <a href="#">Португалия</a>
+                                </div>
+                            </div>
+                            <div className={classes.tabCountries__row}>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Russia} alt=""/>
+                                    <a href="#">Россия</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Turkey} alt=""/>
+                                    <a href="#">Турция</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Chech} alt=""/>
+                                    <a href="#">Чехия</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Hungary} alt=""/>
+                                    <a href="#">Венгрия</a>
+                                </div>
+                                <div className={classes.tabCountries__country}>
+                                    <img src={Egypt} alt=""/>
+                                    <a href="#">Египет</a>
+                                </div>
+                            </div>
+                        </div>
+                    </TabPanel>
+                    <TabPanel className={classes.reactTabsTabPanel}>
+                        <h3>
+                            Города
+                        </h3>
+                    </TabPanel>
+                    <TabPanel className={classes.reactTabsTabPanel}>
+                        <h3>
+                            Достопримечательности
+                        </h3>
                     </TabPanel>
                 </Tabs>
             </div>
