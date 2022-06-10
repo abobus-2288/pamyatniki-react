@@ -53,14 +53,14 @@ const Main = () => {
                         <p className={classes.city}>г. Миоры | 115 лет</p>
                     </div>
                 </div>
-                <div className={classes.bigBan}>
+                <div className={`${classes.bigBan} ${classes.last2Monuments}`}>
                     <div className={classes.country}>Англия</div>
                     <div className={classes.title}>
                         <p className={classes.name}>Биг-Бен</p>
                         <p className={classes.city}>г.Лондон | 179 лет</p>
                     </div>
                 </div>
-                <div className={classes.hram}>
+                <div className={`${classes.hram} ${classes.last2Monuments}`}>
                     <div className={classes.country}>Россия</div>
                     <div className={classes.title}>
                         <p className={classes.name}>Храм Василия Блаженного</p>

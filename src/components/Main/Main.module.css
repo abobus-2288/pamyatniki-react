@@ -33,6 +33,11 @@ main{
     padding-bottom: 331px;
     text-align: center;
 }
+
+.monument {
+    margin: 30px;
+}
+
 .kostel{
     background-image: url(images/kostel.jpg);
     margin-bottom: 23px;
@@ -45,7 +50,7 @@ main{
     background-image: url(images/bashna.jpg);
     margin-bottom: 23px;
 }
-.big-ban{
+.bigBan{
     background-image: url(images/big-ban.jpg);
     margin-bottom: 23px;
 }
@@ -237,4 +242,14 @@ p{
     margin-top: 38px;
     font-size: 26px;
     padding-bottom: 50px;
+}
+
+@media(min-width: 991px) and (max-width: 1440px){
+    .menu {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 990px) {
+
 }
