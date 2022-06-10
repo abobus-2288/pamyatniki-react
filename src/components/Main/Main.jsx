@@ -133,7 +133,7 @@ const Main = () => {
             <div className={classes.menu5 + ' ' + classes.container}>
                 <div className={classes.security}>
                 </div>
-                <div className={classes.warn}>
+                <div className={classes.watchman}>
                 </div>
                 <p className={classes.secondary5}>Нанять охрану и сторожа</p>
             </div>

@@ -244,12 +244,12 @@ p{
     padding-bottom: 50px;
 }
 
-@media(min-width: 991px) and (max-width: 1440px){
+@media screen and(min-width: 991px) and (max-width: 1440px){
     .menu {
         justify-content: center;
     }
 }
 
-@media(max-width: 990px) {
+@media screen and (max-width: 990px) {
 
 }
