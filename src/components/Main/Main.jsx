@@ -11,56 +11,56 @@ const Main = () => {
                 </div>
             </div>
             <div className={classes.menu + ' ' + classes.container}>
-                <div className={classes.kostel}>
+                <div className={`${classes.kostel} ${classes.monument}`}>
                     <div className={classes.country}>Беларусь</div>
                     <div className={classes.title}>
                         <p className={classes.name}>Костел Вознесения Девы Марии</p>
                         <p className={classes.city}>г. Миоры | 115 лет</p>
                     </div>
                 </div>
-                <div className={classes.hram}>
+                <div className={`${classes.hram} ${classes.monument}`}>
                     <div className={classes.country}>Россия</div>
                     <div className={classes.title}>
                         <p className={classes.name}>Храм Василия Блаженного</p>
                         <p className={classes.city}>г. Москва | 446 лет</p>
                     </div>
                 </div>
-                <div className={classes.bashna}>
+                <div className={`${classes.bashna} ${classes.monument}`}>
                     <div className={classes.country}>Франция</div>
                     <div className={classes.title}>
                         <p className={classes.name}>Эйфелева башня</p>
                         <p className={classes.city}>г.Париж | 135 лет</p>
                     </div>
                 </div>
-                <div className={classes.bigBan}>
+                <div className={`${classes.bigBan} ${classes.monument}`}>
                     <div className={classes.country}>Англия</div>
                     <div className={classes.title}>
                         <p className={classes.name}>Биг-Бен</p>
                         <p className={classes.city}>г.Лондон | 179 лет</p>
                     </div>
                 </div>
-                <div className={classes.bashna}>
+                <div className={`${classes.bashna} ${classes.monument}`}>
                     <div className={classes.country}>Франция</div>
                     <div className={classes.title}>
                         <p className={classes.name}>Эйфелева башня</p>
                         <p className={classes.city}>г.Париж | 135 лет</p>
                     </div>
                 </div>
-                <div className={classes.kostel}>
+                <div className={`${classes.kostel} ${classes.monument}`}>
                     <div className={classes.country}>Беларусь</div>
                     <div className={classes.title}>
                         <p className={classes.name}>Костел Вознесения Девы Марии</p>
                         <p className={classes.city}>г. Миоры | 115 лет</p>
                     </div>
                 </div>
-                <div className={`${classes.bigBan} ${classes.last2Monuments}`}>
+                <div className={`${classes.bigBan} ${classes.monument}`}>
                     <div className={classes.country}>Англия</div>
                     <div className={classes.title}>
                         <p className={classes.name}>Биг-Бен</p>
                         <p className={classes.city}>г.Лондон | 179 лет</p>
                     </div>
                 </div>
-                <div className={`${classes.hram} ${classes.last2Monuments}`}>
+                <div className={`${classes.hram} ${classes.monument}`}>
                     <div className={classes.country}>Россия</div>
                     <div className={classes.title}>
                         <p className={classes.name}>Храм Василия Блаженного</p>

@@ -9,9 +9,12 @@ input::placeholder{
     padding: 17px 156px 16px 20px;
 }
 input{
+    box-sizing: border-box;
     width: 550px;
     height: 60px;
     background-color: #151515;
+    color: white;
+    padding:30px;
 }
 .container{
     max-width: 1411px;
@@ -19,10 +22,11 @@ input{
 }
 main{
     background-color: #151515;
+    text-align: center;
 }
 .menu{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: -170px;
 }
@@ -35,7 +39,7 @@ main{
 }
 
 .monument {
-    margin: 30px;
+
 }
 
 .kostel{
@@ -244,12 +248,25 @@ p{
     padding-bottom: 50px;
 }
 
-@media screen and(min-width: 991px) and (max-width: 1440px){
+@media screen and (min-width: 991px) and (max-width: 1439px){
     .menu {
-        justify-content: center;
+        justify-content: space-evenly;
     }
 }
 
 @media screen and (max-width: 990px) {
 
+}
+
+@media  screen and (max-width: 660px) {
+    .monument {
+        /*width: 500px !important;*/
+        height: 624px !important;
+        width: 95% !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 574px){
 }
