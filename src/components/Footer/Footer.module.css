@@ -21,6 +21,10 @@ footer {
     padding: 0 15px 0 15px;
 }
 
+.container p {
+    color: #28783E;
+}
+
 .about{
     max-width: 450px;
     margin: auto;

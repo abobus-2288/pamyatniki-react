@@ -71,28 +71,28 @@ const Main = () => {
             <h1 className={classes.title3}>Достопримечательности<br/>
                 которые находятся в опасности</h1>
             <div className={classes.menu2 + ' ' + classes.container}>
-                <div className={classes.park}>
+                <div className={`${classes.park} ${classes.dangerMonument}`}>
                     <div className={classes.title2}>
                         <p className={classes.name2}>Национальный парк Рапа-Нуи</p>
                         <p className={classes.reason}>Не ухаживают и разрушают камни.</p>
                     </div>
                     <a className={classes.tablet}>Пожертвовать</a>
                 </div>
-                <div className={classes.kutammaku}>
+                <div className={`${classes.kutammaku} ${classes.dangerMonument}`}>
                     <div className={classes.title2}>
                         <p className={classes.name2}>Кутаммаку</p>
                         <p className={classes.reason}>Разрушается, нет денег на постройку.</p>
                     </div>
                     <a className={classes.tablet}>Пожертвовать</a>
                 </div>
-                <div className={classes.sobor}>
+                <div className={`${classes.sobor} ${classes.dangerMonument}`}>
                     <div className={classes.title2}>
                         <p className={classes.name2}>Собор Парижской Богоматери</p>
                         <p className={classes.reason}>Крупный пожар</p>
                     </div>
                     <a className={classes.tablet}>Пожертвовать</a>
                 </div>
-                <div className={classes.cake}>
+                <div className={`${classes.cake} ${classes.dangerMonument}`}>
                     <div className={classes.title2}>
                         <p className={classes.name2}>Пряничные домики Порт-о-Пренса</p>
                         <p className={classes.reason}>Ломают и портят здания.</p>
@@ -118,8 +118,8 @@ const Main = () => {
                     Cтaндapтный нaбop включaeт в ceбя двe-тpи кaмepы, лyчшe бpaть aнтивaндaльныe: рядом с памятником, и
                     oднa-двe вокруг него
                 </p>
-                <h1 className={classes.secondary2}>Закрытие территории</h1>
             </div>
+            <h1 className={classes.secondary2}>Закрытие территории</h1>
             <div className={classes.menu4 + ' ' + classes.container}>
                 <div className={classes.barrier}>
                 </div>
