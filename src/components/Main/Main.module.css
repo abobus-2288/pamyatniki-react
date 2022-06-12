@@ -268,10 +268,12 @@ p {
 
 .security {
     background-image: url(images/security.jpg);
+    background-position: center;
 }
 
 .watchman {
     background-image: url(images/watchman.jpg);
+    background-position: center;
 }
 
 .menu5 > div {
@@ -417,5 +419,15 @@ p {
 
     .title3 {
         font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .barrier {
+        width: 85% !important;
+    }
+
+    .zabor {
+        width: 85% !important;
     }
 }
